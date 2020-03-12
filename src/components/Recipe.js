@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../App.css';
+
 function Recipe(props) {
     
     const recipeState = props.location.state.recipeDetails;
@@ -8,13 +10,16 @@ function Recipe(props) {
     const img = recipeState.image;
     const ingredientsArr = recipeState.ingredients;
     return (
-        <div className="recipes-individual-container">
-            <h3>{name}</h3>
-            <p>{calorie}</p>
-            <img src={img} alt={name}/>
-            <ul>
-                {ingredientsArr.map(item => <li>{item.text}</li>)}
-            </ul>
+        <div className="recipe-individual-container">
+            <div className="recipe-card">
+
+                <h3>{name}</h3>
+                <p>{calorie}</p>
+                <img src={img} alt={name}/>
+                <ul>
+                    {ingredientsArr.map(item => <li>{item.text}</li>)}
+                </ul>
+            </div>
         </div>
     )
 }

@@ -130,6 +130,29 @@ h3 {
 }
 
 
+/*
+* <Recipe/>
+*/
+
+.recipe-individual-container{
+  background-color: #f7ab81;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.recipe-card{
+  
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffb78a, #de9a74);
+  box-shadow:  33px 33px 65px #d2916e, 
+              -33px -33px 65px #ffc594;
+  
+}
+
+
 
 @media (max-width: 1200px){
   .results-container{
