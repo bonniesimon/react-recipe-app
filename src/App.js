@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 
-import Recipe from "./components/Recipe";
+import Recipes from "./components/Recipes";
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
       </form>
       <div className="results-container">
         {recipes.map((recipe, index) => (
-          <Recipe key={index} name={recipe.recipe.label} calorie={recipe.recipe.calories} img={recipe.recipe.image} />
+          <Recipes key={index} name={recipe.recipe.label} calorie={recipe.recipe.calories} img={recipe.recipe.image} />
         ))}
       </div>
 

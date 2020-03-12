@@ -1,14 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function Recipe({name, calorie, img}) {
-
-    return (        
-        <div className="recipe-container">
-            <div className="recipe-details">
-                <h3>{name}</h3>
-                <p>{calorie} </p>
-            </div>
-            <img src={img} alt={name}/>
+function Recipe() {
+    return (
+        <div>
+            <h1>Recipe Page</h1>
         </div>
     )
 }
+
+export default Recipe;
