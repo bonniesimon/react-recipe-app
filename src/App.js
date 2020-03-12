@@ -26,7 +26,7 @@ function App() {
 
   const searchSubmit = e => {
     e.preventDefault();
-    console.log('Hello');
+    console.log('Search Initiated');
     getRecipe(search);
   }
   
@@ -37,8 +37,8 @@ function App() {
         <button>Get Recipe</button>
       </form>
       <div className="results-container">
-        {recipes.map(recipe => (
-          <Recipe key={recipe.recipe.name} name={recipe.recipe.label} calorie={recipe.recipe.calories} img={recipe.recipe.image} />
+        {recipes.map((recipe, index) => (
+          <Recipe key={index} name={recipe.recipe.label} calorie={recipe.recipe.calories} img={recipe.recipe.image} />
         ))}
       </div>
 

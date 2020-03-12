@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Recipe({name, calorie, img}) {
+
     return (        
         <div className="recipe-container">
             <div className="recipe-details">

@@ -32,7 +32,7 @@ h3 {
 .form-container{
   /* margin: 2rem; */
   padding: 2rem;
-  background-color: rgb(212, 212, 212);
+  background-color: #3a405a;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,7 +45,7 @@ h3 {
   outline: none;
   border: none;
   border-radius: 10px 0 0 10px;
-  background-color: rgba(241, 167, 82, 0.986);
+  background-color: #aec5eb;
 }
 
 .form-container button{
@@ -72,19 +72,31 @@ h3 {
   justify-items: flex-start; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 2rem 3rem;
-  background-color: rgba(153, 145, 229, 0.945);
+  /* padding: 2rem 3rem; */
+  /* background-color: #efdbed; */
+  background: linear-gradient(145deg, #ffb78a, #de9a74);
 }
 
 .recipe-container{
-  margin: 0.8rem;
+  margin:5rem 2rem 2rem 2rem;
   /* padding: 0.5rem; */
   /* flex: 0 0 33.3333%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: grey;
+  /* background-color: #f7ab81; */
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffb78a, #de9a74);
+  box-shadow:  33px 33px 65px #d2916e, 
+              -33px -33px 65px #ffc594;
+}
+
+.recipe-container img{
+  margin: 0 0 0.8rem 0;
+  border-radius: 50px;
+  height: 60%;
+  width: auto;
 }
 
 .recipe-details{
@@ -111,7 +123,7 @@ h3 {
   }
 
   .recipe-container img{
-    width: 400px;
+    width: 60%;
   }
 }
 
