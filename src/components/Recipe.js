@@ -2,12 +2,19 @@ import React from 'react';
 
 function Recipe(props) {
     
-    const recipeDetails = props.location.state;
+    const recipeState = props.location.state.recipeDetails;
+    const name = recipeState.label;
+    const calorie = recipeState.calories;
+    const img = recipeState.image;
+    const ingredientsArr = recipeState.ingredients;
     return (
-        <div>
-            <h3>{recipeDetails.name}</h3>
-            <p>{recipeDetails.calorie}</p>
-            <img src={recipeDetails.img} alt={recipeDetails.name}/>
+        <div className="recipes-individual-container">
+            <h3>{name}</h3>
+            <p>{calorie}</p>
+            <img src={img} alt={name}/>
+            <ul>
+                {ingredientsArr.map(item => <li>{item.text}</li>)}
+            </ul>
         </div>
     )
 }

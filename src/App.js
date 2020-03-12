@@ -38,7 +38,6 @@ function App() {
   useEffect(() => {
     const string = localStorage.getItem('recipes');
     const json = JSON.parse(string);
-    console.log("json is ",json)
     setRecipes(json);
   },[])
 
@@ -50,12 +49,13 @@ function App() {
    */
   useEffect(() => {
     let stateRecipe = recipes;
-    if(stateRecipe.length > 0){
+    //if(stateRecipe.length > 0){
       const recipesString = JSON.stringify(recipes);
       localStorage.setItem("recipes", recipesString);
-    }
+    //}
   }, [recipes]);
 
+  let stateRecipe = recipes;
 
   return (
     <div className="App">
@@ -65,7 +65,7 @@ function App() {
       </form>
       <div className="results-container">
         {recipes.map((recipe, index) => (
-          <Recipes key={index} name={recipe.recipe.label} calorie={recipe.recipe.calories} img={recipe.recipe.image} />
+          <Recipes key={index} recipeDetails={recipe.recipe} />
         ))}
       </div>
 

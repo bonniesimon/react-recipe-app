@@ -1,7 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-export default function Recipes({name, calorie, img}) {
+export default function Recipes({recipeDetails}) {
 
+
+    const name = recipeDetails.label;
+    const img = recipeDetails.image;
     //to remove spaces in the name so as to add it to the url in Link
     const urlName =  name.split(/\s/).join('');
    
@@ -10,7 +13,6 @@ export default function Recipes({name, calorie, img}) {
         <div className="recipe-container">
             <div className="recipe-details">
                 <h3>{name}</h3>
-                <p>{calorie} </p>
             </div>
             <img src={img} alt={name}/>
             <button>
@@ -18,7 +20,7 @@ export default function Recipes({name, calorie, img}) {
                     className="link"
                     to={{
                         pathname: `/recipe/${urlName}`,
-                        state: {name: name, calorie: calorie, img: img}
+                        state: {recipeDetails}
                     }}
                 >
                     View Details
