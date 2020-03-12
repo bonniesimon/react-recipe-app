@@ -32,13 +32,15 @@ function App() {
   
   return (
     <div className="App">
-      <form onSubmit={searchSubmit}>
+      <form onSubmit={searchSubmit} className="form-container">
         <input type="text" value={search} onChange={getSearchText} />
         <button>Get Recipe</button>
+      </form>
+      <div className="results-container">
         {recipes.map(recipe => (
           <Recipe key={recipe.recipe.name} name={recipe.recipe.label} calorie={recipe.recipe.calories} img={recipe.recipe.image} />
         ))}
-      </form>
+      </div>
 
     </div>
   );
