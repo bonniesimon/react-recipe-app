@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 
 import Recipes from "./components/Recipes";
@@ -30,6 +30,19 @@ function App() {
     getRecipe(search);
   }
   
+
+  useEffect(() => {
+    const recipesString = JSON.stringify(recipes);
+    localStorage.setItem("recipes", recipesString);
+  }, [recipes]);
+
+  useEffect(() => {
+    const string = localStorage.getItem('recipes');
+    const json = JSON.parse(string);
+    console.log("json is ",json)
+    setRecipes(json);
+  },[])
+
   return (
     <div className="App">
       <form onSubmit={searchSubmit} className="form-container">
