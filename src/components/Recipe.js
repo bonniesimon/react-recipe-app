@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 import '../App.css';
 
@@ -25,11 +25,12 @@ function Recipe(props) {
                 </div>
                 <ul>
                     <h4>Ingredients</h4>
-                    {ingredientsArr.map(item => <li>{item.text}</li>)}
+                    {ingredientsArr.map((item, index) => <li>{item.text}</li>)}
                 </ul>
-                <button>
+                {/* <button>
                     <Link className="link" to={url}>Get Complete Recipe</Link>
-                </button>
+                </button> */}
+                <a href={url}>Get More Details</a>
             </div>
         </div>
     )

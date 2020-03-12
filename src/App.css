@@ -99,7 +99,7 @@ h3 {
 
 .recipe-container img{
   margin: 0 0 0.8rem 0;
-  border-radius: 50px;
+  border-radius: 50%;
   height: auto;
   width: 50%;
 }
@@ -172,29 +172,32 @@ h3 {
   list-style-type: none;
 }
 
-.recipe-card button{
+.recipe-card a{
   width: 40%;
   margin: 1rem auto;
   padding:0.5rem;
   border: 2px solid #3a405a;
+  text-align: center;
   outline: none;
   transition: 0.2ms;
 }
-.recipe-card button:hover{
+.recipe-card a:hover{
   background-color: #3a405a;
   color: white;
   border-radius: 0;
   
 }
 
-.recipe-card button .link{
+.recipe-card a {
   color: inherit;
   outline: none;
   text-decoration: none;
 }
 
 
-
+/*
+* <Recipe/> ENDS
+*/
 
 
 
