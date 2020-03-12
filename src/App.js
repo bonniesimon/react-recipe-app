@@ -48,14 +48,14 @@ function App() {
    * pushing it to localStorage
    */
   useEffect(() => {
-    let stateRecipe = recipes;
+    //let stateRecipe = recipes;
     //if(stateRecipe.length > 0){
       const recipesString = JSON.stringify(recipes);
       localStorage.setItem("recipes", recipesString);
     //}
   }, [recipes]);
 
-  let stateRecipe = recipes;
+  
 
   return (
     <div className="App">
