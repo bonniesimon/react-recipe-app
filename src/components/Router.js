@@ -10,7 +10,7 @@ function Router() {
             <BrowserRouter>
                 <Switch>
                     <Route path="/" component={App} exact />
-                    <Route path="/recipe" component={Recipe}  />
+                    <Route path="/recipe/:name" component={Recipe}  />
                 </Switch>
             </BrowserRouter>
         </div>
