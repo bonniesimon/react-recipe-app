@@ -31,17 +31,31 @@ function App() {
   }
   
 
-  useEffect(() => {
-    const recipesString = JSON.stringify(recipes);
-    localStorage.setItem("recipes", recipesString);
-  }, [recipes]);
-
+  /*
+  *componentDidMount
+  First time the page is loaded, the state recipes is taken from localStorage.
+  */
   useEffect(() => {
     const string = localStorage.getItem('recipes');
     const json = JSON.parse(string);
     console.log("json is ",json)
     setRecipes(json);
   },[])
+
+
+  /**
+   * *componentDidUpdate
+   * sets the recipes to localStorage each time recipes changes. Also it's a good practice to check length of recipes before 
+   * pushing it to localStorage
+   */
+  useEffect(() => {
+    let stateRecipe = recipes;
+    if(stateRecipe.length > 0){
+      const recipesString = JSON.stringify(recipes);
+      localStorage.setItem("recipes", recipesString);
+    }
+  }, [recipes]);
+
 
   return (
     <div className="App">
