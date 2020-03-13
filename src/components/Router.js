@@ -7,7 +7,7 @@ import App from "../App";
 function Router() {
     return (
         <div>
-            <BrowserRouter>
+            <BrowserRouter basename={window.location.pathname || ''}>
                 <Switch>
                     <Route path="/" component={App} exact />
                     <Route path="/recipe/:name" component={Recipe}  />
