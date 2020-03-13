@@ -7,6 +7,7 @@ import App from "../App";
 function Router() {
     return (
         <div>
+            {/* Adding the basename fixed the blank deploy page issue */}
             <BrowserRouter basename={window.location.pathname || ''}>
                 <Switch>
                     <Route path="/" component={App} exact />
